@@ -1,4 +1,3 @@
-
 ## El token unico que cree es: antinao-1377-40
 ## Al ejecutar **git status** la salida fue : *fatal: not a git repository (or any of the parent directories): .git*
 ## Diferencia entre *staging area* y el *working derectory* de **git** : El *working directory* es el editor de codigo donde estas trabajando y donde podes ver en tiempo real los cambios que realizas antes de pasar al commit , y el *staging area* es la lista de cambios que ya elegiste para incluir en el commit antes de pasarlo al repositorio.
