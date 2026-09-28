@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Mi laboratorio peylw </title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+    <body>
+    <!-- TOKEN ALUMNO: antinao-1377-40 -->
+        <header>
+            <h1> Diego Antinao - antinao-1377-40</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acercade.html">Acerca de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <form>
+
+                <!-- Nombre -->
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required maxlength="20">
+                </div>
+
+                <!-- Apellido -->
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" maxlength="20">
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <!-- Teléfono -->
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 2920 123456">
+                </div>
+
+                <!-- Edad -->
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="16" max="120">
+                </div>
+                
+                <!-- Dirección -->
+                <div>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion">
+                </div>
+                
+                <!-- Provincia con datalist -->
+                <div>
+                    <label for="provincia">Provincia:</label>
+                    <input list="provincias" id="provincia" name="provincia">
+                    <datalist id="provincias">
+                        <option value="Río Negro">
+                        <option value="Neuquén">
+                        <option value="Chubut">
+                        <option value="Santa Cruz">
+                        <option value="Tierra del Fuego">
+                        <option value="La Pampa">
+                    </datalist>
+                </div>
+
+                <!-- Código Postal con regex -->
+                
+                <div>
+                    <label for="codigoPostal">Código Postal:</label>
+                    <input type="text" id="codigoPostal" name="codigoPostal" 
+                            pattern="^[A-Z]\d{4}[A-Z]{3}$" 
+                            title="Formato requerido: una letra mayúscula, cuatro dígitos y tres letras mayúsculas (ej: R8500AAF)">
+                </div>
+
+                <!-- Método de Contacto Preferido -->
+                <div>
+                    <p>Método de Contacto Preferido:</p>
+                    <input type="radio" id="contactoEmail" name="contacto" value="email" checked>
+                    <label for="contactoEmail">Correo electrónico</label>
+                    <input type="radio" id="contactoPostal" name="contacto" value="postal">
+                    <label for="contactoPostal">Correo postal</label>
+                    <input type="radio" id="contactoTelefono" name="contacto" value="telefono">
+                    <label for="contactoTelefono">Teléfono</label>
+                </div>
+
+                <!-- Suscripción de Interés -->
+                <div>
+                    <p>Suscripción de Interés:</p>
+                    <input type="checkbox" id="noticias" name="suscripcion" value="noticias">
+                    <label for="noticias">Noticias</label>
+                    <input type="checkbox" id="promociones" name="suscripcion" value="promociones">
+                    <label for="promociones">Promociones</label>
+                    <input type="checkbox" id="alertas" name="suscripcion" value="alertas" checked>
+                    <label for="alertas">Alertas</label>
+                    <input type="checkbox" id="eventos" name="suscripcion" value="eventos">
+                    <label for="eventos">Eventos</label>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" id="btn-cargar-Diego">Cargar</button>
+
+                <table border="1">
+                    <tr>
+                        <th>Campo</th>
+                        <th>Resumen</th>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td id="resumen-nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Apellido</td>
+                        <td id="resumen-apellido"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td id="resumen-email"></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                        <td id="resumen-telefono"></td>
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td id="resumen-edad"></td>
+                    </tr>
+                    <tr>
+                        <td>Dirección</td>
+                        <td id="resumen-direccion"></td>
+                    </tr>
+                    <tr>
+                        <td>Provincia</td>
+                        <td id="resumen-provincia"></td>
+                    </tr>
+                    <tr>
+                        <td>Código Postal</td>
+                        <td id="resumen-cp"></td>
+                    </tr>
+                    <tr>
+                        <td>Método de Contacto</td>
+                        <td id="resumen-contacto"></td>
+                    </tr>
+                    <tr>
+                        <td>Suscripciones</td>
+                        <td id="resumen-suscripciones"></td>
+                    </tr>
+                </table>
+
+            </form>
+        </header>
+        <footer> 
+            <p>© 2026 Diego Antinao - CURZAS - UNCo, Viedma, Río Negro - antinao-1377-40 </p>      
+        </footer>
+    </body>
+</html>
