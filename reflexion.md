@@ -1,13 +1,24 @@
-1. Indique el nombre exacto de la imagen que guardó en su carpeta img/ y el valor del atributo alt que le asignó en acercade.html.
+1. Indique el código HTML literal que utilizó para definir el campo del Código Postal con su correspondiente expresión de patrón (pattern) y atributo title.
+    
+    <div> 
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" name="codigoPostal" 
+                pattern="^[A-Z]\d{4}[A-Z]{3}$" 
+                title="Formato requerido: una letra mayúscula, cuatro dígitos y tres letras mayúsculas (ej: R8500AAF)">
+    </div>
 
-2. ¿Por qué es fundamental utilizar etiquetas semánticas como <main> o <nav> en lugar de usar etiquetas genéricas <div> para estructurar todo el sitio?
+2. Explique para qué sirve la etiqueta <label> en los formularios y cómo se asocia correctamente a un campo de entrada mediante el atributo for.
 
-3. ¿Cómo verificó que las rutas de los enlaces en la barra de navegación eran correctas tanto en el entorno local como tras desplegar en GitHub Pages?
+    La etiqueta <label> sirve para describir el propósito de un campo en un formulario.
 
-RESPUESTAS:
+    Mejora la accesibilidad: los lectores de pantalla la leen para usuarios con discapacidad visual.
 
-1. En la carpeta img/ la imagen la guarde con el nombre img_mi_foto.jpg.jpeg  y el el valor del atributo alt fue "Fotografia de presentacion de Diego Antinao".
+    También mejora la usabilidad: al hacer clic en el texto del <label>, el navegador activa automáticamente el campo asociado.
 
-2. Es fundamental porque las etiquetas semánticas como <main> o <nav> aportan significado y estructura lógica al documento, mientras que un <div> es solo un contenedor genérico sin valor semántico.
+    El atributo for de <label> debe coincidir con el id del campo de entrada.
 
-3. En el entorno local haciendo click en los enlaces <nav>. Y en GitHub pages visite mi sitio y verifique que los enlaces abran la pagina correcta.
+3. ¿Cómo se comportan los campos de selección circular (radio) cuando tienen diferentes atributos name vs. cuando comparten el mismo name?
+
+    Los botones de selección circular (<input type="radio">) permiten elegir una sola opción dentro de un grupo.
+
+    Cuando tienen diferente name cada botón se comporta como un grupo independiente y se pueden seleccionar varios a la vez, porque no están vinculados.
