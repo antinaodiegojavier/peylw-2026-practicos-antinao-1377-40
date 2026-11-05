@@ -1,24 +1,22 @@
-1. Indique el código HTML literal que utilizó para definir el campo del Código Postal con su correspondiente expresión de patrón (pattern) y atributo title.
-    
-    <div> 
-        <label for="codigoPostal">Código Postal:</label>
-        <input type="text" id="codigoPostal" name="codigoPostal" 
-                pattern="^[A-Z]\d{4}[A-Z]{3}$" 
-                title="Formato requerido: una letra mayúscula, cuatro dígitos y tres letras mayúsculas (ej: R8500AAF)">
-    </div>
+# reflexion
 
-2. Explique para qué sirve la etiqueta <label> en los formularios y cómo se asocia correctamente a un campo de entrada mediante el atributo for.
+1. Fragmento CSS de la animación del logo CURZA
 
-    La etiqueta <label> sirve para describir el propósito de un campo en un formulario.
+    ```css
+    .logo-curza{
+         width:80px;
+        height:auto;
+        transition:transform 1s ease-in-out;
+    }
 
-    Mejora la accesibilidad: los lectores de pantalla la leen para usuarios con discapacidad visual.
+    .logo-curza:hover{
+         transform:rotateY(360deg);
+    }
 
-    También mejora la usabilidad: al hacer clic en el texto del <label>, el navegador activa automáticamente el campo asociado.
+2. ¿Por qué es necesario definir un background-color en un elemento sticky?
 
-    El atributo for de <label> debe coincidir con el id del campo de entrada.
+  Es necesario definir un color de fondo en un elemento con position: sticky para que, al desplazarse el contenido por detrás de él, el título permanezca visible y legible. Si no se define un background-color, el contenido que pasa por debajo puede verse a través del elemento adherente, generando una superposición visual que dificulta la lectura y da una apariencia desordenada a la página.
 
-3. ¿Cómo se comportan los campos de selección circular (radio) cuando tienen diferentes atributos name vs. cuando comparten el mismo name?
+3. ¿Qué cambio visual ocurre en pantallas menores a 768px?
 
-    Los botones de selección circular (<input type="radio">) permiten elegir una sola opción dentro de un grupo.
-
-    Cuando tienen diferente name cada botón se comporta como un grupo independiente y se pueden seleccionar varios a la vez, porque no están vinculados.
+ Cuando el sitio se visualiza en una pantalla de tamaño celular (menor a 768px), el menú de navegación cambia de una disposición horizontal a una vertical gracias a las reglas @media. Además, la tabla puede desplazarse horizontalmente sin romper el diseño de la página y los elementos del formulario se adaptan al ancho disponible, mejorando la experiencia de uso en dispositivos móviles.
