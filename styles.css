@@ -213,18 +213,14 @@ tr:nth-child(odd){
 ===================== */
 
 .logo-curza{
-
     width:80px;
     height:auto;
-
-    margin:10px auto;
-
+    border-radius:0;
     display:block;
-
+    margin:10px auto;
     transition:transform 1s ease-in-out;
 }
 
 .logo-curza:hover{
-
     transform:rotateY(360deg);
 }
