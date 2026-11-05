@@ -42,3 +42,189 @@ img {
     height: 500px;
     border-radius: 70px;
 }
+
+/* ======================================
+   TAREA 1 - FORMULARIO Y TABLA
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+body{
+    font-family:'Outfit',sans-serif;
+}
+
+/* FORMULARIO */
+
+form{
+    max-width:900px;
+    margin:20px auto;
+    padding:25px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+form div{
+    margin-bottom:15px;
+}
+
+form label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[list]{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+/* EFECTO FOCUS */
+
+form input:focus{
+    outline:none;
+    border-color:hsl(260,60%,45%);
+    box-shadow:0 0 5px hsla(260,60%,45%,0.4);
+}
+
+/* BOTÓN */
+
+button{
+    padding:12px 20px;
+    background:hsl(260,60%,45%);
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:hsl(280,70%,60%);
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+}
+
+th,
+td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:hsl(260,60%,45%);
+    color:white;
+}
+
+/* FILAS ALTERNADAS */
+
+tr:nth-child(even){
+    background-color:hsl(260,40%,95%);
+}
+
+tr:nth-child(odd){
+    background-color:white;
+}
+
+/* =====================
+   BOTÓN VOLVER ARRIBA
+===================== */
+
+.btn-top{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:hsl(260,60%,45%);
+    color:white;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+
+.contenedor-contacto{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.tabla-responsive{
+    overflow-x:auto;
+}
+
+@media screen and (max-width:768px){
+
+    body{
+        padding-top:230px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contenedor-contacto{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        min-width:600px;
+    }
+
+    img{
+        width:100%;
+        height:auto;
+        max-width:300px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    p{
+        font-size:16px;
+    }
+}
+
+
+/* =====================
+   LOGO CURZA
+===================== */
+
+.logo-curza{
+
+    width:80px;
+    height:auto;
+
+    margin:10px auto;
+
+    display:block;
+
+    transition:transform 1s ease-in-out;
+}
+
+.logo-curza:hover{
+
+    transform:rotateY(360deg);
+}
